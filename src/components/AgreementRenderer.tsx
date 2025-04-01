@@ -7,9 +7,9 @@ import { Block } from "../types/content";
 function AgreementContent() {
   let clauseCount = 0;
   return (
-    <div className="p-6">
+    <div className="p-6 max-w-3xl mx-auto">
       {agreementData.map((section, i) => (
-        <div key={i} className="mb-6">
+        <div key={i} className="mb-6 flex flex-col gap-4">
           {section.children?.map((child, j) => {
             if ((child as Block).type === "clause") {
               clauseCount++;
